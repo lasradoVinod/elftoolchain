@@ -52,7 +52,7 @@ _dwarf_get_reloc_type(Dwarf_P_Debug dbg, int is64)
 	case DW_ISA_RISCV:
 		return (is64 ? R_RISCV_64 : R_RISCV_32);
 	case DW_ISA_IA64:
-		return (is64 ? R_IA_64_DIR64LSB : R_IA_64_DIR32LSB);
+		return (is64 ? R_IA64_DIR64LSB : R_IA64_DIR32LSB);
 	default:
 		break;
 	}
@@ -116,9 +116,9 @@ _dwarf_get_reloc_size(Dwarf_Debug dbg, Dwarf_Unsigned rel_type)
 			return (8);
 		break;
 	case EM_IA_64:
-		if (rel_type == R_IA_64_SECREL32LSB)
+		if (rel_type == R_IA64_SECREL32LSB)
 			return (4);
-		else if (rel_type == R_IA_64_DIR64LSB)
+		else if (rel_type == R_IA64_DIR64LSB)
 			return (8);
 		break;
 	default:
