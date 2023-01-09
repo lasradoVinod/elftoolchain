@@ -1,3 +1,9 @@
+licenses(["notice"])
+
+package(default_visibility = ["//visibility:public"])
+
+exports_files(["LICENSE"])
+
 elf_generated_files = [
     "libelf/libelf_convert",
     "libelf/libelf_fsize",
